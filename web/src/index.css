@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .btn-primary {
+    @apply relative active:top-1 active:left-1 px-4 py-2 flex justify-center text-lg font-bold text-stone-800 outline outline-2 outline-black rounded-md shadow-3xl active:shadow-none;
+  }
+}
+
+.page {
+  position: absolute;
+  left: 0px;
+  right: 0px;
+}
+
+.page-enter {
+  opacity: 0;
+  transform: translateX(100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 300ms, transform 300ms;
+}
